@@ -1,105 +1,251 @@
-/* Reset básico para garantir consistência entre navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================
+   Reset + Variáveis
+   ========================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root{
+  --bg: #f0f2f5;
+  --text: #333;
+  --muted: #515a6a;
+  --brand: #61dafb;
+  --ink: #282c34;
+  --card: #ffffff;
+  --line: rgba(0,0,0,.08);
+  --radius: 12px;
+  --shadow: 0 4px 10px rgba(0,0,0,.08);
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #f0f2f5;
-    color: #333;
+html, body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
 
-header {
-    background: #282c34;
-    color: #61dafb;
-    text-align: center;
-    padding: 20px;
-    border-bottom: 3px solid #61dafb;
+/* Links */
+a{ color: var(--brand); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* Containers */
+.container{
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+/* =========================
+   Header + Navegação
+   ========================= */
+.site-header{
+  background: var(--ink);
+  color: var(--brand);
+  border-bottom: 3px solid var(--brand);
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
 
-header p {
-    font-size: 1.1em;
+.header-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
 }
 
-a {
-    color: #61dafb;
-    text-decoration: none;
+.site-title{
+  margin: 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #fff;
 }
 
-a:hover {
-    text-decoration: underline;
+.subtitle{
+  margin-top: 6px;
+  font-size: 1rem;
+  color: var(--brand);
 }
 
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contacts{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.contacts a{ color: var(--brand); opacity: .95; }
+.contacts a:hover{ opacity: 1; text-decoration: underline; }
+
+/* Navegação interna */
+.site-nav{
+  background: #222833;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.site-nav .container{
+  display: flex;
+  gap: .6rem;
+  overflow: auto;
+  padding: .6rem 20px;
+}
+.site-nav a{
+  color: #dbeafe;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  font-size: .95rem;
+  white-space: nowrap;
+}
+.site-nav a:hover{ background: rgba(255,255,255,.06); text-decoration: none; }
+
+/* Link p/ pular conteúdo (acessibilidade) */
+.skip{
+  position: absolute; left: -9999px; top: auto;
+}
+.skip:focus{
+  left: 1rem; top: 1rem; background: #000; color: #fff;
+  padding: .5rem .75rem; border-radius: .5rem; z-index: 9999;
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #61dafb;
-    padding-bottom: 15px;
+/* =========================
+   Títulos e Seções
+   ========================= */
+h2{
+  color: var(--ink);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  border-bottom: 2px solid var(--brand);
+  padding-bottom: 6px;
+  margin: 28px 0 14px;
 }
 
-.profile img {
-    border-radius: 50%;
-    margin-right: 20px;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+h3{
+  color: var(--ink);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
-.profile-info {
-    max-width: 600px;
+/* Cards e listas */
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
 }
 
-h2 {
-    border-bottom: 2px solid #61dafb;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    color: #282c34;
-    font-size: 1.8em;
+.list{ list-style: none; padding-left: 0; }
+.list li + li{ margin-top: .5rem; }
+
+ul{ list-style: none; padding-left: 0; }
+ul li{ padding: 5px 0; }
+
+/* =========================
+   Perfil (foto + resumo)
+   ========================= */
+.profile{
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+  align-items: start;
+  margin: 20px 0;
+}
+.profile.card{ padding: 16px; }
+
+.avatar,
+.profile img{
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--brand);
 }
 
-h3 {
-    color: #282c34;
-    margin-bottom: 10px;
-    font-size: 1.5em;
+.profile-info{ max-width: 100%; }
+
+.tags{
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  margin-top: .8rem; list-style: none; padding: 0;
+}
+.tags li{
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .25rem .6rem;
+  color: #3f4a5e;
+  background: #f7fafc;
+  font-size: .9rem;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* =========================
+   Experiência (jobs)
+   ========================= */
+.job + .job{ margin-top: 12px; }
+.job header{ margin-bottom: 6px; }
+.job ul{ padding-left: 0; }
+.job li{
+  position: relative;
+  padding-left: 22px;
+}
+.job li:before{
+  content: "•";
+  position: absolute; left: 0; top: 0;
+  color: var(--brand);
+  font-weight: 700;
 }
 
-ul li {
-    padding: 5px 0;
+/* =========================
+   Skills (grid)
+   ========================= */
+.skills-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.skills-grid .card{ padding: 16px; }
+
+/* Links de projeto */
+.link{ display: inline-block; margin-left: .4rem; color: #0ea5e9; text-decoration: underline; }
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer{
+  background: var(--ink);
+  color: var(--brand);
+  margin-top: 28px;
+  border-top: 3px solid var(--brand);
+}
+.site-footer .container{ padding: 14px 20px; text-align: center; }
+
+/* Se quiser footer fixo, troque por:
+.site-footer{ position: fixed; bottom: 0; left: 0; right: 0; }
+body{ padding-bottom: 64px; }  (ajuste a altura conforme necessário)
+*/
+
+/* =========================
+   Acessibilidade (foco)
+   ========================= */
+body.show-focus :focus{
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
-section {
-    margin-bottom: 20px;
+/* =========================
+   Responsividade
+   ========================= */
+@media (max-width: 900px){
+  .profile{ grid-template-columns: 1fr; }
+  .avatar, .profile img{ width: 100%; height: 240px; border-radius: 12px; }
+  .skills-grid{ grid-template-columns: 1fr; }
+  .header-wrap{ flex-direction: column; align-items: flex-start; gap: 4px; }
 }
 
-footer {
-    background: #282c34;
-    color: #61dafb;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+@media (max-width: 520px){
+  .site-nav .container{ gap: .4rem; }
+  .site-nav a{ font-size: .85rem; padding: .3rem .55rem; }
+}
+
+/* =========================
+   Modo impressão
+   ========================= */
+@media print{
+  :root{ --bg:#fff; --text:#000; --ink:#000; --brand:#000; --card:#fff; --line:#000; }
+  .site-header, .site-nav, .site-footer{ display: none !important; }
+  .card{ border: 1px solid #000; box-shadow: none; }
+  a{ color: #000; text-decoration: underline; }
 }
