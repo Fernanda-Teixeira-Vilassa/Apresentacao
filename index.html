@@ -1,161 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernanda Vilassa</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fernanda Vilassa — Currículo</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Currículo online de Fernanda Vilassa — Analista de Suporte e Testes (QA), Vila Velha/ES."/>
 </head>
 <body>
-    <header>
-        <h1>Fernanda Vilassa</h1>
-        <p><a href="mailto:nandavilassa@gmail.com">nandavilassa@gmail.com</a></p>
-    </header>
+  <header>
+    <h1>Fernanda Vilassa</h1>
+    <p class="subtitle">Analista de Suporte e Testes (QA) • Vila Velha/ES</p>
+    <nav class="contacts">
+      <a href="mailto:nandavilassa@gmail.com">nandavilassa@gmail.com</a>
+      <span>•</span>
+      <a href="https://wa.me/5527992741345" target="_blank" rel="noopener">WhatsApp</a>
+      <span>•</span>
+      <a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank" rel="noopener">GitHub</a>
+      <span>•</span>
+      <a href="https://www.linkedin.com/in/fernandavilassa/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </header>
 
-    <div class="container">
-        <section id="profile" class="profile">
-            <img src="foto-perfil.jpg" alt="Foto de Fernanda Vilassa">
-            <div class="profile-info">
-                <p id="age"></p>
-                <p>Vila Velha/ES</p>
-                <p><a href="https://wa.me/5527992741345" target="_blank">Whatsapp</p>
-                <p><a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank">GitHub</a></p>
-                <p><a href="https://www.linkedin.com/in/fernandavilassa/" target="_blank">LinkedIn</a></p>
-            </div>
-        </section>
+  <main class="container">
+    <!-- Perfil -->
+    <section id="profile" class="profile">
+      <img src="foto-perfil.jpg" alt="Foto de Fernanda Vilassa" class="avatar"/>
+      <div class="profile-info">
+        <h2>Resumo</h2>
+        <p>
+          Profissional com experiência em <b>Suporte, Testes Funcionais (manuais e automatizados)</b> e <b>qualidade de software</b>.
+          Atuação em análise de chamados, investigação de erros, reprodução de cenários, criação de casos de teste, testes de
+          APIs e interface, além de automação de rotinas e apoio a times de desenvolvimento e clientes. Apaixonada por tecnologia,
+          organização de processos e melhoria contínua.
+        </p>
+      </div>
+    </section>
 
-        <section id="education">
-            <h2>Formação</h2>
-            <ul>
-                <li>Engenharia de Software - Estácio de Sá de Vila Velha (Conclusão em Dezembro/2025)</li>
-                <li>Análise e Desenvolvimento de Sistemas – Estácio de Sá de Vila Velha (Concluído em Julho/2023)</li>
-                <li>Técnico em Contabilidade – CEDTEC (Concluído em 2020)</li>
-            </ul>
-        </section>
+    <!-- Experiência -->
+    <section id="experience">
+      <h2>Experiência Profissional</h2>
 
-        <section id="skills">
-            <h2>Soft-Skills</h2>
-            <ul>
-                <li>Dinamismo e dedicação</li>
-                <li>Pensamento analítico</li>
-                <li>Visão de negócios</li>
-                <li>Criatividade</li>
-                <li>Boa Comunicação</li>
-                <li>Curiosidade</li>
-                <li>Trabalho em equipe</li>
-                <li>Proatividade</li>
-                <li>Adaptabilidade</li>
-            </ul>
-        </section>
+      <article class="job">
+        <h3>Athenas Tecnologia em Softwares (Athenas 3000)</h3>
+        <p><strong>Cargo:</strong> Analista de Suporte e Testes (QA)</p>
+        <p><strong>Período:</strong> 08/2024 — atual</p>
+        <ul>
+          <li>Atendimento técnico a módulos (ex.: Folha, Fiscal, Contábil, e-Social), análise de logs e reprodução de erros.</li>
+          <li>Planejamento e execução de testes funcionais (Web e API), elaboração de cenários e evidências.</li>
+          <li>Apoio em migrações (ex.: Firebird 3 → 5), parametrizações e integrações (CNAB 400, entre outras).</li>
+          <li>Automação de rotinas, consultas SQL e criação de relatórios/dashboards para suporte e operação.</li>
+          <li>Interação com desenvolvimento para correções, priorização e validação de OSs.</li>
+        </ul>
+      </article>
 
-        <section id="courses">
-            <h2>Cursos</h2>
-            <ul>
-                <li>Emissão de Notas Fiscais - SENAC ES</li>
-                <li>Cadastro, Crédito e Cobrança – SENACES</li>
-                <li>Office Básico - MEGASITE</li>
-                <li>Excel Básico e Avançado - MEGASITE</li>
-                <li>CorelDRAW – MEGASITE</li>
-                <li>HTML, CSS e JavaScript Básico - Fundação Bradesco</li>
-                <li>React Js, Redux, Webpack, Redux-Form, MongoDB, Express e Node - Udemy</li>
-                <li>UFT One – Udemy</li>
-                <li>SQL PL/SQL e Modelagem de Banco de Dados - Udemy</li>
-                <li>Java XPERT – Full Stack Development – FIAP</li>
-                <li>SAP HCM, SAP SD, SAP FI, SAP MM, SAP Basis e ABAP - Udemy</li>
-                <li>Lógica de Programação – SENAI - ES</li>
-                <li>Git e GitHub – DIO</li>
-                <li>Projetos Ágeis com SCRUM – DIO</li>
-                <li>Python – Básico – DIO</li>
-                <li>Conceitos de API e Clean Architecture - DIO</li>
-                <li>Inglês – Intermediário</li>
-            </ul>
-        </section>
+      <article class="job">
+        <h3>Vale</h3>
+        <p><strong>Cargo:</strong> Estagiária de Desenvolvimento</p>
+        <p><strong>Período:</strong> 12/2021 — 06/2023</p>
+        <ul>
+          <li>Testes funcionais (manuais e automatizados) e performance.</li>
+          <li>Criação/manutenção de scripts de testes e configuração de aplicações.</li>
+          <li>Desenvolvimento de pequenos projetos (front-end e back-end) e low/no-code.</li>
+          <li>Automação de processos e desenvolvimento de relatórios.</li>
+        </ul>
+      </article>
 
-        <section id="experience">
-            <h2>Experiência Profissional</h2>
-            
-            <div class="job">
-                <h3>Vale</h3>
-                <p><strong>Função:</strong> Estagiária de Desenvolvimento</p>
-                <p><strong>Período:</strong> 12/2021 a 06/2023</p>
-                <ul>
-                    <li>Execução de testes funcionais, tanto manuais quanto automatizados</li>
-                    <li>Criação e manutenção de scripts de testes funcionais</li>
-                    <li>Elaboração e execução de testes de performance</li>
-                    <li>Gerenciamento de acessos de aplicações</li>
-                    <li>Desenvolvimento de pequenos projetos de software</li>
-                    <li>Configuração de aplicações</li>
-                    <li>Desenvolvimento de aplicações web (front-end e back-end)</li>
-                    <li>Desenvolvimento de aplicações low code/no code</li>
-                    <li>Automação de processos e fluxos de negócios</li>
-                    <li>Desenvolvimento de relatórios</li>
-                </ul>
-            </div>
-            
-            <div class="job">
-                <h3>BrasilCenter Comunicação</h3>
-                <p><strong>Função:</strong> Assistente Administrativo</p>
-                <p><strong>Período:</strong> 05 a 09/2021</p>
-                <ul>
-                    <li>Atendimento aos manifestos enviados pela Anatel</li>
-                </ul>
-            </div>
+      <article class="job">
+        <h3>BrasilCenter Comunicação</h3>
+        <p><strong>Cargo:</strong> Assistente Administrativo</p>
+        <p><strong>Período:</strong> 05/2021 — 09/2021</p>
+        <ul>
+          <li>Atendimento e tratamento de manifestações (Anatel), registros e rotinas administrativas.</li>
+        </ul>
+      </article>
 
-            <div class="job">
-                <h3>Vilassa e Vilassa Ltda Me</h3>
-                <p><strong>Função:</strong> Operadora de Caixa / Assistente Administrativo</p>
-                <p><strong>Período:</strong> 01/2016 a 10/2019</p>
-                <ul>
-                    <li>Realização de tarefas administrativas de rotina</li>
-                    <li>Controle de pagamentos e recebimentos</li>
-                    <li>Emissão de notas fiscais</li>
-                    <li>Fechamento de caixa</li>
-                    <li>Preenchimento de relatórios de produção e saída</li>
-                    <li>Organização do escritório e do estoque</li>
-                    <li>Controle da folha de ponto</li>
-                    <li>Confecção de comunicados e documentos</li>
-                    <li>Atendimento como operadora de caixa durante horários de pico</li>
-                </ul>
-            </div>
-            
-            <div class="job">
-                <h3>ZELAR Serviços Ltda</h3>
-                <p><strong>Função:</strong> Recepcionista / Auxiliar de Escritório</p>
-                <p><strong>Período:</strong> 07/2007 a 02/2008</p>
-                <ul>
-                    <li>Atendimento a clientes, fornecedores e prestadores de serviços por telefone, meios eletrônicos e pessoalmente</li>
-                    <li>Execução de atividades de escritório, como separação e classificação de documentos e correspondências</li>
-                    <li>Transcrição de dados, lançamentos, prestação de informações</li>
-                    <li>Controle administrativo e organização de arquivos e fichários</li>
-                    <li>Emissão de Conhecimento de Transporte Eletrônico (CT-e) e Manifesto Eletrônico de Documentos Fiscais (MDF-e)</li>
-                    <li>Cadastro e inclusão de motoristas e veículos no sistema das rastreadoras</li>
-                </ul>
-            </div>
-            
-            <div class="job">
-                <h3>Calçados Itapuã SA CISA</h3>
-                <p><strong>Função:</strong> Operadora de Caixa / Auxiliar Administrativo de Cobrança</p>
-                <p><strong>Período:</strong> 11/2002 a 04/2006</p>
-                <ul>
-                    <li>Atuação como operadora de caixa por 1 ano antes da promoção para administração</li>
-                    <li>Controle de inscrições e baixas nos órgãos de proteção ao consumidor</li>
-                    <li>Geração e análise de relatórios para cobranças</li>
-                    <li>Efetuação de cobranças em casos de clientes especiais</li>
-                    <li>Geração de relatórios para pagamentos de representantes</li>
-                    <li>Análise e acompanhamento de liberação de crédito e vendas</li>
-                    <li>Identificação de pagamentos via depósito ou transferências bancárias</li>
-                    <li>Envio e baixa de boletos ao banco</li>
-                    <li>Atendimento por telefone</li>
-                    <li>Autorização de acordos de cobranças</li>
-                </ul>
-            </div>
-        </section>
-    </div>
+      <article class="job">
+        <h3>Vilassa e Vilassa Ltda ME</h3>
+        <p><strong>Cargo:</strong> Operadora de Caixa / Assistente Administrativo</p>
+        <p><strong>Período:</strong> 01/2016 — 10/2019</p>
+        <ul>
+          <li>Rotinas financeiras, emissão de NF, fechamento de caixa e organização de estoque/escritório.</li>
+        </ul>
+      </article>
 
-    <footer>
-        <p>&copy; 2024 Fernanda Vilassa</p>
-    </footer>
+      <article class="job">
+        <h3>ZELAR Serviços Ltda</h3>
+        <p><strong>Cargo:</strong> Recepcionista / Auxiliar de Escritório</p>
+        <p><strong>Período:</strong> 07/2007 — 02/2008</p>
+        <ul>
+          <li>Atendimento a clientes/fornecedores, organização de documentos e emissão de CT-e/MDF-e.</li>
+        </ul>
+      </article>
 
-    <script src="scripts.js"></script>
+      <article class="job">
+        <h3>Calçados Itapuã SA CISA</h3>
+        <p><strong>Cargo:</strong> Operadora de Caixa / Auxiliar Administrativo de Cobrança</p>
+        <p><strong>Período:</strong> 11/2002 — 04/2006</p>
+        <ul>
+          <li>Cobrança, relatórios, análise de crédito e rotinas de pagamentos/boletos.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Formação -->
+    <section id="education">
+      <h2>Formação</h2>
+      <ul>
+        <li><strong>Engenharia de Software</strong> — Estácio de Sá (Vila Velha) — conclusão prevista: 12/2025</li>
+        <li><strong>Análise e Desenvolvimento de Sistemas</strong> — Estácio de Sá (Vila Velha) — concluído: 07/2023</li>
+        <li><strong>Técnico em Contabilidade</strong> — CEDTEC — concluído: 2020</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Competências</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Hard Skills</h3>
+          <ul>
+            <li>Testes Funcionais (Web/API), Casos de Teste, Evidências</li>
+            <li>Automação: Selenium WebDriver, Jest; JMeter (performance)</li>
+            <li>APIs &amp; Integrações; Postman</li>
+            <li>SQL (consultas, modelagem básica)</li>
+            <li>JavaScript/Node.js, React, HTML/CSS</li>
+            <li>Ferramentas: JIRA, Trello, Git/GitHub</li>
+            <li>ERP Athenas 3000 (módulos: Folha, Fiscal, Contábil, e-Social)</li>
+            <li>Banco: Firebird (migrações 3 → 5, ajustes e parâmetros)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Pensamento analítico e visão de processos</li>
+            <li>Comunicação e trabalho em equipe</li>
+            <li>Proatividade, curiosidade e adaptabilidade</li>
+            <li>Organização, atenção a detalhes e foco em qualidade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cursos -->
+    <section id="courses">
+      <h2>Cursos e Certificações</h2>
+      <ul>
+        <li>HTML, CSS e JavaScript Básico — Fundação Bradesco</li>
+        <li>React, Redux, Webpack, MongoDB, Express e Node — Udemy</li>
+        <li>UFT One — Udemy</li>
+        <li>SQL, PL/SQL e Modelagem de Banco — Udemy</li>
+        <li>Java XPERT — Full Stack Development — FIAP</li>
+        <li>SAP (HCM, SD, FI, MM, Basis e ABAP) — Udemy</li>
+        <li>Projetos Ágeis com SCRUM — DIO</li>
+        <li>Git e GitHub — DIO</li>
+        <li>Python — Básico — DIO</li>
+        <li>Emissão de Notas Fiscais — SENAC ES</li>
+        <li>Cadastro, Crédito e Cobrança — SENACES</li>
+        <li>Excel Básico e Avançado — MEGASITE</li>
+        <li>Inglês — Intermediário</li>
+      </ul>
+    </section>
+
+    <!-- Projetos (opcional, puxa do GitHub) -->
+    <section id="projects">
+      <h2>Projetos</h2>
+      <ul>
+        <li><strong>Quiz Divertido</strong> — Plataforma educacional (Next.js, Node/Express, MongoDB). Rank, perguntas por série/disciplina e banners afiliados. <a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank" rel="noopener">Ver no GitHub</a></li>
+        <li><strong>Segredos do Prazer</strong> — E-commerce com integrações (pagamentos e afiliação). <a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank" rel="noopener">Repositórios</a></li>
+        <li><strong>Refeição D’Casa</strong> — Site de combos e calculadora de preços (HTML/CSS/JS). <a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank" rel="noopener">Repositórios</a></li>
+      </ul>
+    </section>
+
+    <!-- Idiomas -->
+    <section id="languages">
+      <h2>Idiomas</h2>
+      <ul>
+        <li><strong>Português:</strong> nativo</li>
+        <li><strong>Inglês:</strong> intermediário</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fernanda Vilassa</p>
+  </footer>
 </body>
 </html>
