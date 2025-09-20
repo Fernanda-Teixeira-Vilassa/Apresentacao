@@ -12,15 +12,22 @@
   --card: #ffffff;
   --line: rgba(0,0,0,.08);
   --radius: 12px;
-  --shadow: 0 4px 10px rgba(0,0,0,.08);
+  --shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 
+/* Tipografia base + rolagem suave */
 html, body{
   background: var(--bg);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  font-size: 16px;
 }
+html { scroll-behavior: smooth; }
+@media (min-width: 1200px){ body { font-size: 17px; } }
+
+/* Quando navegar para âncoras, compensa o header sticky */
+:target { scroll-margin-top: 96px; }
 
 /* Links */
 a{ color: var(--brand); text-decoration: none; }
@@ -169,6 +176,7 @@ ul li{ padding: 5px 0; }
   background: #f7fafc;
   font-size: .9rem;
 }
+.tags li:hover { background: #eef6ff; border-color: #cfe8ff; }
 
 /* =========================
    Experiência (jobs)
@@ -201,6 +209,28 @@ ul li{ padding: 5px 0; }
 .link{ display: inline-block; margin-left: .4rem; color: #0ea5e9; text-decoration: underline; }
 
 /* =========================
+   Hobbies
+   ========================= */
+#hobbies ul { list-style: none; padding: 0; }
+#hobbies li {
+  padding: 6px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+/* (Opcional) Ícones por classe:
+#hobbies li.f1::before{ content: "🏎️"; }
+#hobbies li.leitura::before{ content: "📚"; }
+#hobbies li.musica::before{ content: "🎶"; }
+#hobbies li.filmes::before{ content: "🎬"; }
+#hobbies li.danca::before{ content: "💃"; }
+#hobbies li.praia::before{ content: "🌊"; }
+#hobbies li.escritora::before{ content: "✍️"; }
+#hobbies li::before{ display:inline-block; width:1.4em; }
+*/
+
+/* =========================
    Footer
    ========================= */
 .site-footer{
@@ -219,10 +249,21 @@ body{ padding-bottom: 64px; }  (ajuste a altura conforme necessário)
 /* =========================
    Acessibilidade (foco)
    ========================= */
+a:focus-visible{
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
 body.show-focus :focus{
   outline: 2px solid var(--brand);
   outline-offset: 3px;
   border-radius: 6px;
+}
+
+/* Ativo na navbar (requer JS que coloca .is-active no link da seção atual) */
+.site-nav a.is-active{
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.25);
 }
 
 /* =========================
@@ -240,17 +281,11 @@ body.show-focus :focus{
   .site-nav a{ font-size: .85rem; padding: .3rem .55rem; }
 }
 
-#hobbies ul {
-  list-style: none;
-  padding: 0;
-}
-
-#hobbies li {
-  padding: 6px 0;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: .5rem;
+/* =========================
+   Preferências do usuário
+   ========================= */
+@media (prefers-reduced-motion: reduce){
+  html { scroll-behavior: auto; }
 }
 
 /* =========================
@@ -261,4 +296,9 @@ body.show-focus :focus{
   .site-header, .site-nav, .site-footer{ display: none !important; }
   .card{ border: 1px solid #000; box-shadow: none; }
   a{ color: #000; text-decoration: underline; }
+  h2 { border-bottom: 1px solid #000; padding-bottom: 4px; }
+  .profile { grid-template-columns: 120px 1fr; gap: 12px; }
+  .avatar { width: 120px; height: 120px; border: 1px solid #000; }
+  .tags li { border: 1px solid #000; background: #fff; color: #000; }
 }
+
