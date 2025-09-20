@@ -3,48 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fernanda Vilassa — Currículo</title>
+  <title>Fernanda Vilassa — Currículo & Portfólio</title>
+  <meta name="description" content="Currículo online de Fernanda Vilassa — Analista de Suporte e Testes (QA), Vila Velha/ES. Experiência, projetos, skills e contatos."/>
+  <meta name="theme-color" content="#0b0f14"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Fernanda Vilassa — Currículo & Portfólio"/>
+  <meta property="og:description" content="Analista de Suporte e Testes (QA) — projetos, experiência e contato."/>
+  <meta property="og:image" content="foto-perfil.jpg"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css"/>
-  <meta name="description" content="Currículo online de Fernanda Vilassa — Analista de Suporte e Testes (QA), Vila Velha/ES."/>
 </head>
 <body>
-  <header>
-    <h1>Fernanda Vilassa</h1>
-    <p class="subtitle">Analista de Suporte e Testes (QA) • Vila Velha/ES</p>
-    <nav class="contacts">
-      <a href="mailto:nandavilassa@gmail.com">nandavilassa@gmail.com</a>
-      <span>•</span>
-      <a href="https://wa.me/5527992741345" target="_blank" rel="noopener">WhatsApp</a>
-      <span>•</span>
-      <a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank" rel="noopener">GitHub</a>
-      <span>•</span>
-      <a href="https://www.linkedin.com/in/fernandavilassa/" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-wrap">
+      <div class="identity">
+        <h1 class="site-title">Fernanda Vilassa</h1>
+        <p class="subtitle">Analista de Suporte e Testes (QA) • Vila Velha/ES</p>
+      </div>
+      <nav class="contacts" aria-label="Contatos e redes">
+        <a href="mailto:nandavilassa@gmail.com" aria-label="Enviar e-mail">E-mail</a>
+        <span aria-hidden="true">•</span>
+        <a href="https://wa.me/5527992741345" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WhatsApp</a>
+        <span aria-hidden="true">•</span>
+        <a href="https://github.com/Fernanda-Teixeira-Vilassa" target="_blank" rel="noopener" aria-label="Abrir GitHub">GitHub</a>
+        <span aria-hidden="true">•</span>
+        <a href="https://www.linkedin.com/in/fernandavilassa/" target="_blank" rel="noopener" aria-label="Abrir LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+    <nav class="site-nav" aria-label="Navegação interna">
+      <div class="container">
+        <a href="#profile">Perfil</a>
+        <a href="#experience">Experiência</a>
+        <a href="#education">Formação</a>
+        <a href="#skills">Competências</a>
+        <a href="#courses">Cursos</a>
+        <a href="#projects">Projetos</a>
+        <a href="#languages">Idiomas</a>
+      </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main id="conteudo" class="container">
     <!-- Perfil -->
-    <section id="profile" class="profile">
+    <section id="profile" class="profile card">
       <img src="foto-perfil.jpg" alt="Foto de Fernanda Vilassa" class="avatar"/>
       <div class="profile-info">
         <h2>Resumo</h2>
         <p>
-          Profissional com experiência em <b>Suporte, Testes Funcionais (manuais e automatizados)</b> e <b>qualidade de software</b>.
+          Profissional com experiência em <strong>Suporte</strong>, <strong>Testes Funcionais (manuais e automatizados)</strong> e <strong>qualidade de software</strong>.
           Atuação em análise de chamados, investigação de erros, reprodução de cenários, criação de casos de teste, testes de
           APIs e interface, além de automação de rotinas e apoio a times de desenvolvimento e clientes. Apaixonada por tecnologia,
           organização de processos e melhoria contínua.
         </p>
+        <p><strong>Idade:</strong> <span id="age" aria-label="idade"></span></p>
+        <ul class="tags" aria-label="Principais ferramentas e stack">
+          <li>React</li><li>Node.js</li><li>Selenium</li><li>Jest</li><li>Postman / APIs</li><li>JMeter</li><li>SQL</li><li>Jira</li>
+        </ul>
       </div>
     </section>
 
     <!-- Experiência -->
     <section id="experience">
       <h2>Experiência Profissional</h2>
-
-      <article class="job">
-        <h3>Athenas Tecnologia em Softwares (Athenas 3000)</h3>
-        <p><strong>Cargo:</strong> Analista de Suporte e Testes (QA)</p>
-        <p><strong>Período:</strong> 08/2024 — atual</p>
+      <article class="job card">
+        <header>
+          <h3>Athenas Tecnologia em Softwares (Athenas 3000)</h3>
+          <p><strong>Cargo:</strong> Analista de Suporte e Testes (QA) • <strong>Período:</strong> 08/2024 — atual</p>
+        </header>
         <ul>
           <li>Atendimento técnico a módulo Administrativo e Athenas Online, análise de logs e reprodução de erros.</li>
           <li>Planejamento e execução de testes funcionais (Web e API), elaboração de cenários e evidências.</li>
@@ -53,11 +85,11 @@
           <li>Interação com desenvolvimento para correções, priorização e validação de OSs.</li>
         </ul>
       </article>
-
-      <article class="job">
-        <h3>Vale</h3>
-        <p><strong>Cargo:</strong> Estagiária de Desenvolvimento</p>
-        <p><strong>Período:</strong> 12/2021 — 06/2023</p>
+      <article class="job card">
+        <header>
+          <h3>Vale</h3>
+          <p><strong>Cargo:</strong> Estagiária de Desenvolvimento • <strong>Período:</strong> 12/2021 — 06/2023</p>
+        </header>
         <ul>
           <li>Testes funcionais (manuais e automatizados) e performance.</li>
           <li>Criação/manutenção de scripts de testes e configuração de aplicações.</li>
@@ -65,38 +97,38 @@
           <li>Automação de processos e desenvolvimento de relatórios.</li>
         </ul>
       </article>
-
-      <article class="job">
-        <h3>BrasilCenter Comunicação</h3>
-        <p><strong>Cargo:</strong> Assistente Administrativo</p>
-        <p><strong>Período:</strong> 05/2021 — 09/2021</p>
+      <article class="job card">
+        <header>
+          <h3>BrasilCenter Comunicação</h3>
+          <p><strong>Cargo:</strong> Assistente Administrativo • <strong>Período:</strong> 05/2021 — 09/2021</p>
+        </header>
         <ul>
           <li>Atendimento e tratamento de manifestações (Anatel), registros e rotinas administrativas.</li>
         </ul>
       </article>
-
-      <article class="job">
-        <h3>Vilassa e Vilassa Ltda ME</h3>
-        <p><strong>Cargo:</strong> Operadora de Caixa / Assistente Administrativo</p>
-        <p><strong>Período:</strong> 01/2016 — 10/2019</p>
+      <article class="job card">
+        <header>
+          <h3>Vilassa e Vilassa Ltda ME</h3>
+          <p><strong>Cargo:</strong> Operadora de Caixa / Assistente Administrativo • <strong>Período:</strong> 01/2016 — 10/2019</p>
+        </header>
         <ul>
           <li>Rotinas financeiras, emissão de NF, fechamento de caixa e organização de estoque/escritório.</li>
         </ul>
       </article>
-
-      <article class="job">
-        <h3>ZELAR Serviços Ltda</h3>
-        <p><strong>Cargo:</strong> Recepcionista / Auxiliar de Escritório</p>
-        <p><strong>Período:</strong> 07/2007 — 02/2008</p>
+      <article class="job card">
+        <header>
+          <h3>ZELAR Serviços Ltda</h3>
+          <p><strong>Cargo:</strong> Recepcionista / Auxiliar de Escritório • <strong>Período:</strong> 07/2007 — 02/2008</p>
+        </header>
         <ul>
           <li>Atendimento a clientes/fornecedores, organização de documentos e emissão de CT-e/MDF-e.</li>
         </ul>
       </article>
-
-      <article class="job">
-        <h3>Calçados Itapuã SA CISA</h3>
-        <p><strong>Cargo:</strong> Operadora de Caixa / Auxiliar Administrativo de Cobrança</p>
-        <p><strong>Período:</strong> 11/2002 — 04/2006</p>
+      <article class="job card">
+        <header>
+          <h3>Calçados Itapuã SA CISA</h3>
+          <p><strong>Cargo:</strong> Operadora de Caixa / Auxiliar Administrativo de Cobrança • <strong>Período:</strong> 11/2002 — 04/2006</p>
+        </header>
         <ul>
           <li>Cobrança, relatórios, análise de crédito e rotinas de pagamentos/boletos.</li>
         </ul>
@@ -106,7 +138,7 @@
     <!-- Formação -->
     <section id="education">
       <h2>Formação</h2>
-      <ul>
+      <ul class="list card">
         <li><strong>Engenharia de Software</strong> — Estácio de Sá (Vila Velha) — conclusão prevista: 12/2025</li>
         <li><strong>Análise e Desenvolvimento de Sistemas</strong> — Estácio de Sá (Vila Velha) — concluído: 07/2023</li>
         <li><strong>Técnico em Contabilidade</strong> — CEDTEC — concluído: 2020</li>
@@ -116,18 +148,18 @@
     <!-- Skills -->
     <section id="skills">
       <h2>Competências</h2>
-      <div class="skills-grid">
+      <div class="skills-grid card">
         <div>
           <h3>Hard Skills</h3>
           <ul>
             <li>Testes Funcionais (Web/API), Casos de Teste, Evidências</li>
             <li>Automação: Selenium WebDriver, Jest; JMeter (performance)</li>
-            <li>APIs &amp; Integrações; Postman</li>
+            <li>APIs & Integrações; Postman</li>
             <li>SQL (consultas, modelagem básica)</li>
             <li>JavaScript/Node.js, React, HTML/CSS</li>
             <li>Ferramentas: JIRA, Trello, Git/GitHub</li>
-            <li>ERP Athenas 3000 (módulos: Folha, Fiscal, Contábil, e-Social)</li>
-            <li>Banco: Firebird (migrações 3 → 5, ajustes e parâmetros)</li>
+            <li>ERP Athenas 3000 (Folha, Fiscal, Contábil, e-Social)</li>
+            <li>Firebird 3→5 (migração, ajustes e parâmetros)</li>
           </ul>
         </div>
         <div>
@@ -145,7 +177,7 @@
     <!-- Cursos -->
     <section id="courses">
       <h2>Cursos e Certificações</h2>
-      <ul>
+      <ul class="list card">
         <li>HTML, CSS e JavaScript Básico — Fundação Bradesco</li>
         <li>React, Redux, Webpack, MongoDB, Express e Node — Udemy</li>
         <li>UFT One — Udemy</li>
@@ -162,25 +194,21 @@
       </ul>
     </section>
 
-    <!-- Projetos (opcional, puxa do GitHub) -->
-     <!-- Projetos -->
+    <!-- Projetos -->
     <section id="projects">
       <h2>Projetos</h2>
-      <ul>
+      <ul class="list card">
         <li>
-          <strong>Refeição D’Casa</strong> — Site de pedidos de refeições e combos, com formulário e
-          calculadora de preços feita em HTML, CSS e JavaScript. 
-          <a href="https://github.com/Fernanda-Teixeira-Vilassa/refeicaodcasa" target="_blank" rel="noopener">Ver no GitHub</a>
+          <strong>Refeição D’Casa</strong> — Site de pedidos de refeições e combos, com formulário e calculadora de preços (HTML, CSS, JS).
+          <a class="link" href="https://github.com/Fernanda-Teixeira-Vilassa/refeicaodcasa" target="_blank" rel="noopener">Ver no GitHub</a>
         </li>
         <li>
-          <strong>Convite de Casamento Max &amp; Silva</strong> — Página em HTML/CSS com timeline do evento,
-          RSVP via WhatsApp e Google Maps embed. 
-          <a href="https://github.com/Fernanda-Teixeira-Vilassa/Casamento-Max-e-Silva" target="_blank" rel="noopener">Ver no GitHub</a>
+          <strong>Convite de Casamento Max & Silva</strong> — Página com timeline do evento, RSVP via WhatsApp e Google Maps embed (HTML/CSS).
+          <a class="link" href="https://github.com/Fernanda-Teixeira-Vilassa/Casamento-Max-e-Silva" target="_blank" rel="noopener">Ver no GitHub</a>
         </li>
         <li>
-          <strong>Segredos do Prazer</strong> — E-commerce em desenvolvimento, com HTML/CSS/JS no front e 
-          integrações (pagamentos e afiliados).
-          <a href="https://github.com/Fernanda-Teixeira-Vilassa/segredosdoprazer" target="_blank" rel="noopener">Ver no GitHub</a>
+          <strong>Segredos do Prazer</strong> — E-commerce em desenvolvimento, front em HTML/CSS/JS com integrações de pagamentos/afiliados.
+          <a class="link" href="https://github.com/Fernanda-Teixeira-Vilassa/segredosdoprazer" target="_blank" rel="noopener">Ver no GitHub</a>
         </li>
       </ul>
     </section>
@@ -188,18 +216,35 @@
     <!-- Idiomas -->
     <section id="languages">
       <h2>Idiomas</h2>
-      <ul>
+      <ul class="list card">
         <li><strong>Português:</strong> nativo</li>
         <li><strong>Inglês:</strong> intermediário</li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Fernanda Vilassa</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Fernanda Vilassa • Feito com carinho e café ☕</p>
+    </div>
   </footer>
+
+  <!-- Dados estruturados para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fernanda Vilassa",
+    "jobTitle": "Analista de Suporte e Testes (QA)",
+    "address": {"@type": "PostalAddress", "addressLocality": "Vila Velha", "addressRegion": "ES", "addressCountry": "BR"},
+    "email": "mailto:nandavilassa@gmail.com",
+    "sameAs": [
+      "https://github.com/Fernanda-Teixeira-Vilassa",
+      "https://www.linkedin.com/in/fernandavilassa/"
+    ]
+  }
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
