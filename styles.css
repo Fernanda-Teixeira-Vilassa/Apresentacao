@@ -240,6 +240,19 @@ body.show-focus :focus{
   .site-nav a{ font-size: .85rem; padding: .3rem .55rem; }
 }
 
+#hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+#hobbies li {
+  padding: 6px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
 /* =========================
    Modo impressão
    ========================= */
