@@ -19,7 +19,7 @@
 html, body{
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -211,25 +211,16 @@ ul li{ padding: 5px 0; }
 /* =========================
    Hobbies
    ========================= */
-/* =========================
-   Hobbies
-   ========================= */
 #hobbies .card ul { padding-left: 0; }
-
 #hobbies .card li {
-  position: relative;
-  padding-left: 22px;
   margin-bottom: 6px;
+  padding-left: 0;   /* sem recuo para não duplicar bullet */
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1rem;
 }
-
-#hobbies .card li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--brand);
-  font-weight: 700;
-}
+#hobbies .card li::before { content: none; }
 
 /* =========================
    Footer
@@ -244,7 +235,7 @@ ul li{ padding: 5px 0; }
 
 /* Se quiser footer fixo, troque por:
 .site-footer{ position: fixed; bottom: 0; left: 0; right: 0; }
-body{ padding-bottom: 64px; }  (ajuste a altura conforme necessário)
+body{ padding-bottom: 64px; } 
 */
 
 /* =========================
@@ -261,7 +252,7 @@ body.show-focus :focus{
   border-radius: 6px;
 }
 
-/* Ativo na navbar (requer JS que coloca .is-active no link da seção atual) */
+/* Ativo na navbar (via JS) */
 .site-nav a.is-active{
   background: rgba(255,255,255,.1);
   border-color: rgba(255,255,255,.25);
@@ -302,4 +293,3 @@ body.show-focus :focus{
   .avatar { width: 120px; height: 120px; border: 1px solid #000; }
   .tags li { border: 1px solid #000; background: #fff; color: #000; }
 }
-
