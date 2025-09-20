@@ -211,24 +211,25 @@ ul li{ padding: 5px 0; }
 /* =========================
    Hobbies
    ========================= */
-#hobbies ul { list-style: none; padding: 0; }
-#hobbies li {
-  padding: 6px 0;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: .5rem;
+/* =========================
+   Hobbies
+   ========================= */
+#hobbies .card ul { padding-left: 0; }
+
+#hobbies .card li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 6px;
 }
-/* (Opcional) Ícones por classe:
-#hobbies li.f1::before{ content: "🏎️"; }
-#hobbies li.leitura::before{ content: "📚"; }
-#hobbies li.musica::before{ content: "🎶"; }
-#hobbies li.filmes::before{ content: "🎬"; }
-#hobbies li.danca::before{ content: "💃"; }
-#hobbies li.praia::before{ content: "🌊"; }
-#hobbies li.escritora::before{ content: "✍️"; }
-#hobbies li::before{ display:inline-block; width:1.4em; }
-*/
+
+#hobbies .card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--brand);
+  font-weight: 700;
+}
 
 /* =========================
    Footer
